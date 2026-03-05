@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { LanguageProvider } from "./context/LanguageContext";
 import { VipProvider } from "./context/VipContext";
 import { AuthProvider } from "./context/AuthContext";
@@ -273,6 +274,7 @@ export default function RootLayout({
             </WatchlistProvider>
           </AuthProvider>
         </LanguageProvider>
+        <Analytics />
       </body>
     </html>
   );
